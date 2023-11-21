@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProductWebAPI.Data;
+using ProductWebAPI.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -32,7 +33,20 @@ namespace ProductWebAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var product = _context.Products.Find(id);
+            var product = _context.Products
+            .Select(p => new ProductDTO
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Price = p.Price,
+                Reviews = p.Reviews.Select(r => new ReviewDTO
+                {
+                    Id = r.Id,
+                    Text = r.Text,
+                    Rating = r.Rating,
+                }).ToList(),
+                AverageRating = p.Reviews.Average(r => r.Rating)
+            }).Where(p => p.Id == id);
             if (product == null) { return NotFound(); }
             else { return Ok(product); }
 
