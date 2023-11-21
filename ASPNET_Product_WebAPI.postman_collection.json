@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "3a10377f-c615-454c-84b1-dffbf2630ac2",
+		"name": "ASPNET_Product_WebAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31184245"
+	},
+	"item": [
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products Under Price",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product by Id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rubik's Cube\",\r\n    \"price\": 9.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7021/api/Products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Wok Pan\",\r\n    \"price\": 28.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7021/api/Products/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7021/api/Products/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7021/api/Reviews",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Review by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7021/api/Reviews/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Reviews",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Review by Product Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7021/api/Reviews/Product/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Reviews",
+						"Product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"A fantastic puzzle cube!\",\r\n    \"rating\": 5,\r\n    \"productId\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7021/api/Reviews",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Review",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"A fantastic puzzle toy!\",\r\n    \"rating\": 5,\r\n    \"productId\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7021/api/Reviews/16",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Reviews",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Review",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7021/api/Reviews/16",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Reviews",
+						"16"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
