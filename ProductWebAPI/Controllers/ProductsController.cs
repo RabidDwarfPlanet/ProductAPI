@@ -33,7 +33,7 @@ namespace ProductWebAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var product = _context.Products
+            var product = _context.Products.Include(p => p.Reviews)
             .Select(p => new ProductDTO
             {
                 Id = p.Id,
