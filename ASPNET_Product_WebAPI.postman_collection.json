@@ -10,7 +10,19 @@
 			"name": "Get All Products",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7021/api/Products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
 			},
 			"response": []
 		},
@@ -18,7 +30,25 @@
 			"name": "Get All Products Under Price",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7021/api/Products?maxPrice=10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Products"
+					],
+					"query": [
+						{
+							"key": "maxPrice",
+							"value": "10"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -26,7 +56,20 @@
 			"name": "Get Product by Id",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7021/api/Products/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7021",
+					"path": [
+						"api",
+						"Products",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},
